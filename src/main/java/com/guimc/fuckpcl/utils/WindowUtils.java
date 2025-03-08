@@ -6,6 +6,7 @@ import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.platform.win32.WinUser;
 import com.sun.jna.win32.StdCallLibrary;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class WindowUtils {
@@ -16,7 +17,7 @@ public class WindowUtils {
     }
 
     public static boolean isWindows() {
-        return System.getProperty("os.name").toLowerCase().contains("windows");
+        return File.separator.equals("\\");//DOS类系统特有的反斜杠separator
     }
 
     public static String[] getWindowNames() {
