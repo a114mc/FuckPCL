@@ -1,8 +1,6 @@
 package com.guimc.fuckpcl;
 
 import com.guimc.fuckpcl.utils.WindowUtils;
-import kotlin.jvm.JvmOverloads;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.Arrays;
@@ -21,7 +19,6 @@ public class PCLChecker {
      * @param deleteFolder delete PCL data folder for next PCL deleted check
      * @return check result
      */
-    @JvmOverloads
     public static boolean fullCheck(File mcDir, boolean deleteFolder) {
         // check if there is a window named PCL
         if (titleCheck())
@@ -62,7 +59,7 @@ public class PCLChecker {
      * @param deleteFolder delete PCL data folder for next PCL deleted check
      * @return check result
      */
-    public static boolean folderCheck(@NotNull File mcDir, boolean deleteFolder) {
+    public static boolean folderCheck(File mcDir, boolean deleteFolder) {
 //    require(mcDir.exists()) { "Argument \"mcDir\" is not exists" }
 //    require(mcDir.isDirectory) { "Argument \"mcDir\" should be a folder" }
 
